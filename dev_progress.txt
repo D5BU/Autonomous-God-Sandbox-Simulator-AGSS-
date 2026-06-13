@@ -109,3 +109,4 @@ Step 108/114: Bind brush size slider updates
 Step 109/114: Bind simulation speed controllers (pause, 1x, 2x, 5x)
 Step 110/114: Bind day/night cycle toggle switch
 Step 111/114: Bind audio mute toggle switch
+Step 112/114: Bind local storage save slot read/write
