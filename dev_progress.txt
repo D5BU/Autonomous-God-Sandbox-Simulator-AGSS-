@@ -71,3 +71,4 @@ Step 70/114: Create volcanic eruption cooldown ticking
 Step 71/114: Add volcano eruption lava burst logic
 Step 72/114: Add day/night cycle clock tracker in renderer
 Step 73/114: Add sunset/dawn color overlay shaders
+Step 74/114: Add night overlay tinting
