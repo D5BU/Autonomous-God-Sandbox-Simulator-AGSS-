@@ -1,0 +1,21 @@
+﻿{
+  "name": "autonomous-god-sandbox-simulator",
+  "version": "1.0.0",
+  "description": "A standalone God simulator game inspired by Worldbox and Civilization V/VI.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "sandbox",
+    "simulation",
+    "god-game",
+    "electron"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}
+
