@@ -27,3 +27,4 @@ Step 26/114: Set up basic requestAnimationFrame main loop
 Step 27/114: Implement viewport transform parameters (zoom, pan)
 Step 28/114: Add resize event listeners to keep canvas full size
 Step 29/114: Implement screen-to-grid coordinate transforms
+Step 30/114: Add mouse press listeners to canvas
