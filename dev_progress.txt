@@ -65,3 +65,4 @@ Step 64/114: Implement forest spread cellular physics
 Step 65/114: Add fire duration and fire spread automata rules
 Step 66/114: Make forest tiles highly flammable
 Step 67/114: Implement ash fertilizer effect for grass regrowth
+Step 68/114: Implement lava flow downhill physics
