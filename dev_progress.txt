@@ -35,3 +35,4 @@ Step 34/114: Implement mouse move coordinates tracer
 Step 35/114: Create World class in src/world.js
 Step 36/114: Initialize 100x100 grid of tiles
 Step 37/114: Implement createTile factory function
+Step 38/114: Add terrain type defaults mapping
