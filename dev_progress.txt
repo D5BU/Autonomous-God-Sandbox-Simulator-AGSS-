@@ -5,3 +5,4 @@ Step 4/114: Set up Electron main process wrapper
 Step 5/114: Add window control IPC listeners in main.js
 Step 6/114: Add basic HTML structure with title bar
 Step 7/114: Configure viewport canvas in index.html
+Step 8/114: Add style reset and global variables in CSS
