@@ -73,3 +73,4 @@ Step 72/114: Add day/night cycle clock tracker in renderer
 Step 73/114: Add sunset/dawn color overlay shaders
 Step 74/114: Add night overlay tinting
 Step 75/114: Create glowing radial gradients for lava at night
+Step 76/114: Create glowing radial gradients for volcanoes at night
