@@ -86,3 +86,4 @@ Step 85/114: Integrate particles drawing in renderer
 Step 86/114: Connect rain brush to extinguish fires
 Step 87/114: Connect snow brush to freeze water to ice
 Step 88/114: Connect sunshine brush to melt ice to water
+Step 89/114: Connect meteor brush to create craters and lava
