@@ -1,3 +1,4 @@
 ﻿Step 1/114: Initial commit - repository setup
 Step 2/114: Add gitignore configuration
 Step 3/114: Add package.json configuration
+Step 4/114: Set up Electron main process wrapper
