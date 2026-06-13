@@ -67,3 +67,4 @@ Step 66/114: Make forest tiles highly flammable
 Step 67/114: Implement ash fertilizer effect for grass regrowth
 Step 68/114: Implement lava flow downhill physics
 Step 69/114: Add water cooling lava into mountain rock physics
+Step 70/114: Create volcanic eruption cooldown ticking
