@@ -97,3 +97,4 @@ Step 96/114: Implement placement click sound effect
 Step 97/114: Implement steam sizzle sound effect
 Step 98/114: Implement fire crackling sound loops
 Step 99/114: Implement volcanic eruption sub-bass explosion
+Step 100/114: Implement chord synthesizer scheduler for music
