@@ -62,3 +62,4 @@ Step 61/114: Add temperature and moisture attributes to tiles
 Step 62/114: Add cellular automata update tick loop
 Step 63/114: Implement plant growth tick timers on soil
 Step 64/114: Implement forest spread cellular physics
+Step 65/114: Add fire duration and fire spread automata rules
