@@ -22,3 +22,4 @@ Step 21/114: Style save slot buttons in right panel
 Step 22/114: Style action buttons (regenerate, import, export)
 Step 23/114: Create main game orchestrator entrypoint src/main.js
 Step 24/114: Initialize Game instance on DOMContentLoaded
+Step 25/114: Set up Game class shell in src/game.js
