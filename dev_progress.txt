@@ -111,3 +111,4 @@ Step 110/114: Bind day/night cycle toggle switch
 Step 111/114: Bind audio mute toggle switch
 Step 112/114: Bind local storage save slot read/write
 Step 113/114: Bind map export/import and seed generation actions
+Step 114/114: Beta Release: Complete God Simulator engine with 3D height shadows, glowing night shader, audio synthesis, and cloud layers
