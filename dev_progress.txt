@@ -83,3 +83,4 @@ Step 82/114: Add gravity-based lava spark emitters
 Step 83/114: Add rain streak particle emitters
 Step 84/114: Add snow drift particle emitters
 Step 85/114: Integrate particles drawing in renderer
+Step 86/114: Connect rain brush to extinguish fires
