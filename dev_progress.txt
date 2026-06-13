@@ -60,3 +60,4 @@ Step 59/114: Render snowcapped peaks on mountains
 Step 60/114: Render volcanic cones with craters
 Step 61/114: Add temperature and moisture attributes to tiles
 Step 62/114: Add cellular automata update tick loop
+Step 63/114: Implement plant growth tick timers on soil
