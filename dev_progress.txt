@@ -54,3 +54,4 @@ Step 53/114: Implement smooth tile blending algorithm
 Step 54/114: Test tile blending rendering pipeline
 Step 55/114: Add height-based 3D shadow cast logic
 Step 56/114: Create shadow cast polygon builders for mountains
+Step 57/114: Add shadow casting for volcanoes
