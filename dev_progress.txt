@@ -41,3 +41,4 @@ Step 40/114: Implement simple grid coordinate safety checks
 Step 41/114: Implement basic terrain painting brush loop
 Step 42/114: Add circular brush logic in world.js
 Step 43/114: Add square brush logic in world.js
+Step 44/114: Create Renderer class in src/renderer.js
