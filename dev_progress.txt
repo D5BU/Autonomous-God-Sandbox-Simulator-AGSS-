@@ -32,3 +32,4 @@ Step 31/114: Add mouse drag pan logic (right click drag)
 Step 32/114: Add mouse zoom logic (scroll wheel centered on mouse)
 Step 33/114: Add brush drawing mouse input listener
 Step 34/114: Implement mouse move coordinates tracer
+Step 35/114: Create World class in src/world.js
