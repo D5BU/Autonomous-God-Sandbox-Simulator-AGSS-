@@ -95,3 +95,4 @@ Step 94/114: Initialize Web Audio API AudioContext safely
 Step 95/114: Create procedural noise buffer generators
 Step 96/114: Implement placement click sound effect
 Step 97/114: Implement steam sizzle sound effect
+Step 98/114: Implement fire crackling sound loops
