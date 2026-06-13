@@ -12,3 +12,4 @@ Step 11/114: Add glassmorphic backdrop filters in CSS
 Step 12/114: Create top status bar layout in CSS
 Step 13/114: Add simulation speed controls to UI layout
 Step 14/114: Add left telemetry brush panels in CSS
+Step 15/114: Add bottom dock panel for god tools in styles.css
