@@ -39,3 +39,4 @@ Step 38/114: Add terrain type defaults mapping
 Step 39/114: Add world statistics counter (land ratio)
 Step 40/114: Implement simple grid coordinate safety checks
 Step 41/114: Implement basic terrain painting brush loop
+Step 42/114: Add circular brush logic in world.js
