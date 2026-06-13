@@ -47,3 +47,4 @@ Step 46/114: Create base colors palette for all terrain types
 Step 47/114: Implement render loop clearing function
 Step 48/114: Implement screen drawing viewport translation matrix
 Step 49/114: Draw base ocean tiles on canvas
+Step 50/114: Add water wave sine wave displacement animation
