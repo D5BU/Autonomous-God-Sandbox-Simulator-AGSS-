@@ -15,3 +15,4 @@ Step 14/114: Add left telemetry brush panels in CSS
 Step 15/114: Add bottom dock panel for god tools in styles.css
 Step 16/114: Style terrain selection buttons in bottom dock
 Step 17/114: Style weather brushes in dock
+Step 18/114: Style disaster brushes in dock
