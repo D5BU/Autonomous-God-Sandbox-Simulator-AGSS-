@@ -49,3 +49,4 @@ Step 48/114: Implement screen drawing viewport translation matrix
 Step 49/114: Draw base ocean tiles on canvas
 Step 50/114: Add water wave sine wave displacement animation
 Step 51/114: Add coastal foam borders to shallow sea
+Step 52/114: Implement terrain precedence sorting
