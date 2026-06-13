@@ -101,3 +101,4 @@ Step 100/114: Implement chord synthesizer scheduler for music
 Step 101/114: Add slow attack/release envelopes for ambient synth
 Step 102/114: Create beautiful minor/major seventh chord transitions
 Step 103/114: Integrate AudioEngine in Game and World ticks
+Step 104/114: Create UIManager class in src/ui.js
