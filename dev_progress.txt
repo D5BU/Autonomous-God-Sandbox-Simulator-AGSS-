@@ -8,3 +8,4 @@ Step 7/114: Configure viewport canvas in index.html
 Step 8/114: Add style reset and global variables in CSS
 Step 9/114: Design custom frameless window styling in CSS
 Step 10/114: Style HUD container panels in styles.css
+Step 11/114: Add glassmorphic backdrop filters in CSS
