@@ -37,3 +37,4 @@ Step 36/114: Initialize 100x100 grid of tiles
 Step 37/114: Implement createTile factory function
 Step 38/114: Add terrain type defaults mapping
 Step 39/114: Add world statistics counter (land ratio)
+Step 40/114: Implement simple grid coordinate safety checks
