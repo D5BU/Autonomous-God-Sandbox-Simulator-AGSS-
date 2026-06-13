@@ -24,3 +24,4 @@ Step 23/114: Create main game orchestrator entrypoint src/main.js
 Step 24/114: Initialize Game instance on DOMContentLoaded
 Step 25/114: Set up Game class shell in src/game.js
 Step 26/114: Set up basic requestAnimationFrame main loop
+Step 27/114: Implement viewport transform parameters (zoom, pan)
