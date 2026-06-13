@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous God Sandbox Simulator (AGSS)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Window Title Bar for Frameless Native App -->
+  <div id="title-bar">
+    <div class="title-drag-area">
+      <svg class="title-icon" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,18A2,2 0 0,1 10,16A2,2 0 0,1 12,14A2,2 0 0,1 14,16A2,2 0 0,1 12,18M17,13A2,2 0 0,1 15,11A2,2 0 0,1 17,9A2,2 0 0,1 19,11A2,2 0 0,1 17,13M7,13A2,2 0 0,1 5,11A2,2 0 0,1 7,9A2,2 0 0,1 9,11A2,2 0 0,1 7,13Z"/>
+      </svg>
+      <span class="title-text">Autonomous God Sandbox Simulator</span>
+    </div>
+    <div class="window-controls">
+      <button id="btn-minimize" title="Minimize" class="win-btn">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19,13H5V11H19V13Z"/></svg>
+      </button>
+      <button id="btn-maximize" title="Maximize/Restore" class="win-btn">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4,4H20V20H4V4M6,8V18H18V8H6Z"/></svg>
+      </button>
+      <button id="btn-close" title="Close" class="win-btn close">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Game Canvas -->
+  <canvas id="game-canvas"></canvas>
+
+  <!-- Game HUD Overlay -->
+  <div id="hud-container">
+    <!-- Top HUD: Speed, Stats, Time -->
+    <div id="top-bar" class="hud-panel glass">
+      <div class="stats-group">
+        <div class="stat-item" id="stat-time" title="World Time">
+          <span class="icon">🕒</span> <span class="val">Year 1, Month 1</span>
+        </div>
+        <div class="stat-item" id="stat-ratio" title="Land vs Water Ratio">
+          <span class="icon">🌍</span> <span class="val">Land 0% / Water 100%</span>
+        </div>
+        <div class="stat-item" id="stat-volcanoes" title="Active Volcanoes">
+          <span class="icon">🌋</span> <span class="val">0 Active</span>
+        </div>
+        <div class="stat-item" id="stat-fire" title="Fires Active">
+          <span class="icon">🔥</span> <span class="val">0 Blazes</span>
+        </div>
+      </div>
+
+      <div class="speed-controls">
+        <button id="btn-speed-pause" class="speed-btn" title="Pause Sim">⏸</button>
+        <button id="btn-speed-1x" class="speed-btn active" title="Speed 1x">▶</button>
+        <button id="btn-speed-2x" class="speed-btn" title="Speed 2x">▶▶</button>
+        <button id="btn-speed-5x" class="speed-btn" title="Speed 5x">⚡</button>
+      </div>
+
+      <div class="time-controls">
+        <button id="btn-time-cycle" class="time-btn" title="Toggle Day/Night Cycle">🌙 Cycle: ON</button>
+      </div>
+    </div>
+
+    <!-- Left HUD: Brush Settings -->
+    <div id="left-panel" class="hud-panel glass">
+      <h3>BRUSH CONFIG</h3>
+      <div class="control-group">
+        <label for="brush-size">Size: <span id="brush-size-val">3</span></label>
+        <input type="range" id="brush-size" min="1" max="10" value="3">
+      </div>
+      <div class="control-group">
+        <label>Shape:</label>
+        <div class="shape-toggle">
+          <button id="brush-shape-circle" class="toggle-btn active" title="Circular Brush">⬤ Circle</button>
+          <button id="brush-shape-square" class="toggle-btn" title="Square Brush">⬛ Square</button>
+        </div>
+      </div>
+      <div class="control-group">
+        <label>Atmosphere:</label>
+        <div class="info-bubble" id="info-hover">
+          Hover over terrain for details.
+        </div>
+      </div>
+    </div>
+
+    <!-- Right HUD: Save/Load & Options -->
+    <div id="right-panel" class="hud-panel glass">
+      <h3>WORLD ARCHIVE</h3>
+      <div class="save-slots">
+        <button class="save-slot-btn" data-slot="1">Slot 1 - Empty</button>
+        <button class="save-slot-btn" data-slot="2">Slot 2 - Empty</button>
+        <button class="save-slot-btn" data-slot="3">Slot 3 - Empty</button>
+      </div>
+      <div class="system-actions">
+        <button id="btn-export" class="sys-btn" title="Export current world configuration to file">📤 Export File</button>
+        <button id="btn-import" class="sys-btn" title="Import world configuration file">📥 Import File</button>
+        <button id="btn-regenerate" class="sys-btn warning" title="Create a procedurally generated random world">🎲 Random Seed</button>
+        <button id="btn-clear" class="sys-btn danger" title="Clear everything back to ocean">🌊 Reset to Ocean</button>
+      </div>
+    </div>
+
+    <!-- Bottom HUD: Powers Dock -->
+    <div id="bottom-dock" class="hud-panel glass">
+      <div class="dock-tabs">
+        <button class="dock-tab-btn active" data-tab="terrain">🏔 Terrain</button>
+        <button class="dock-tab-btn" data-tab="weather">🌧 Weather</button>
+        <button class="dock-tab-btn" data-tab="disasters">🔥 Cataclysm</button>
+      </div>
+      
+      <div class="dock-content">
+        <!-- Terrain Category -->
+        <div class="dock-panel active" id="panel-terrain">
+          <button class="tool-btn active" data-tool="deep_ocean" title="Deep Ocean: Creates deep depth water.">
+            <span class="tool-emoji">🌊</span>
+            <span class="tool-name">Deep Ocean</span>
+          </button>
+          <button class="tool-btn" data-tool="shallow_sea" title="Shallow Sea: Creates warm coastal water.">
+            <span class="tool-emoji">💧</span>
+            <span class="tool-name">Shallow Sea</span>
+          </button>
+          <button class="tool-btn" data-tool="sand" title="Sand/Beach: Creates sandy coasts.">
+            <span class="tool-emoji">⏳</span>
+            <span class="tool-name">Beach Sand</span>
+          </button>
+          <button class="tool-btn" data-tool="grass" title="Grassland: Fertile land, grows grass/trees.">
+            <span class="tool-emoji">🌱</span>
+            <span class="tool-name">Grassland</span>
+          </button>
+          <button class="tool-btn" data-tool="forest" title="Forest: Dense trees, fuels fire easily.">
+            <span class="tool-emoji">🌲</span>
+            <span class="tool-name">Forest</span>
+          </button>
+          <button class="tool-btn" data-tool="mountain" title="Mountain: Tall peaks that cast 3D shadows.">
+            <span class="tool-emoji">⛰</span>
+            <span class="tool-name">Mountain</span>
+          </button>
+          <button class="tool-btn" data-tool="volcano" title="Volcano: Gathers pressure and erupts lava.">
+            <span class="tool-emoji">🌋</span>
+            <span class="tool-name">Volcano</span>
+          </button>
+        </div>
+
+        <!-- Weather Category -->
+        <div class="dock-panel" id="panel-weather">
+          <button class="tool-btn" data-tool="rain" title="Rain: Quenches fire, grows forests, fills shallow sea.">
+            <span class="tool-emoji">🌧</span>
+            <span class="tool-name">Rain Cloud</span>
+          </button>
+          <button class="tool-btn" data-tool="snow" title="Snow: Freezes terrain, converts water to ice.">
+            <span class="tool-emoji">🌨</span>
+            <span class="tool-name">Snow Cloud</span>
+          </button>
+          <button class="tool-btn" data-tool="sun" title="Sunshine: Melts ice, dries land, heats up areas.">
+            <span class="tool-emoji">☀️</span>
+            <span class="tool-name">Warm Sun</span>
+          </button>
+        </div>
+
+        <!-- Disasters Category -->
+        <div class="dock-panel" id="panel-disasters">
+          <button class="tool-btn" data-tool="lava" title="Lava Flow: Hot liquid stone, flows down peaks.">
+            <span class="tool-emoji">☄️</span>
+            <span class="tool-name">Lava flow</span>
+          </button>
+          <button class="tool-btn" data-tool="fire" title="Wildfire: Sparks fires that burn vegetation.">
+            <span class="tool-emoji">🔥</span>
+            <span class="tool-name">Sparks</span>
+          </button>
+          <button class="tool-btn" data-tool="meteor" title="Meteor Strike: Devastating explosion leaving deep craters.">
+            <span class="tool-emoji">☄️</span>
+            <span class="tool-name">Meteor</span>
+          </button>
+          <button class="tool-btn" data-tool="lightning" title="Lightning Bolt: Ignites targets and shatters mountains.">
+            <span class="tool-emoji">⚡</span>
+            <span class="tool-name">Lightning</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio mute indicator -->
+  <div id="audio-panel" class="hud-panel glass">
+    <button id="btn-audio-toggle" title="Toggle Sound/Music">🔊 Music: ON</button>
+  </div>
+
+  <!-- Imports Game Modules -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
+
