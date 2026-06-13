@@ -19,3 +19,4 @@ Step 18/114: Style disaster brushes in dock
 Step 19/114: Add glowing active highlights for brushes
 Step 20/114: Add custom range sliders for brush sizing
 Step 21/114: Style save slot buttons in right panel
+Step 22/114: Style action buttons (regenerate, import, export)
