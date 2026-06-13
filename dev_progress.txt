@@ -43,3 +43,4 @@ Step 42/114: Add circular brush logic in world.js
 Step 43/114: Add square brush logic in world.js
 Step 44/114: Create Renderer class in src/renderer.js
 Step 45/114: Implement canvas resizing and context bindings
+Step 46/114: Create base colors palette for all terrain types
