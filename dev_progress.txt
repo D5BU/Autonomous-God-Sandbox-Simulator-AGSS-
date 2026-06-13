@@ -29,3 +29,4 @@ Step 28/114: Add resize event listeners to keep canvas full size
 Step 29/114: Implement screen-to-grid coordinate transforms
 Step 30/114: Add mouse press listeners to canvas
 Step 31/114: Add mouse drag pan logic (right click drag)
+Step 32/114: Add mouse zoom logic (scroll wheel centered on mouse)
