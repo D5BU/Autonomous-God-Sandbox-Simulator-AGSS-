@@ -106,3 +106,4 @@ Step 105/114: Bind title bar controls to Electron IPC
 Step 106/114: Bind bottom dock category tabs
 Step 107/114: Bind toolbar selection state highlights
 Step 108/114: Bind brush size slider updates
+Step 109/114: Bind simulation speed controllers (pause, 1x, 2x, 5x)
