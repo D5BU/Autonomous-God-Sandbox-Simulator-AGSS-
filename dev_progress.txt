@@ -104,3 +104,4 @@ Step 103/114: Integrate AudioEngine in Game and World ticks
 Step 104/114: Create UIManager class in src/ui.js
 Step 105/114: Bind title bar controls to Electron IPC
 Step 106/114: Bind bottom dock category tabs
+Step 107/114: Bind toolbar selection state highlights
