@@ -2,3 +2,4 @@
 Step 2/114: Add gitignore configuration
 Step 3/114: Add package.json configuration
 Step 4/114: Set up Electron main process wrapper
+Step 5/114: Add window control IPC listeners in main.js
