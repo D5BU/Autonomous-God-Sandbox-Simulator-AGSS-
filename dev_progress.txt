@@ -59,3 +59,4 @@ Step 58/114: Render 3D pine tree triangles for forest tiles
 Step 59/114: Render snowcapped peaks on mountains
 Step 60/114: Render volcanic cones with craters
 Step 61/114: Add temperature and moisture attributes to tiles
+Step 62/114: Add cellular automata update tick loop
