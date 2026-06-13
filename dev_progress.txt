@@ -78,3 +78,4 @@ Step 77/114: Create glowing radial gradients for wildfires at night
 Step 78/114: Create ParticleSystem class in src/particles.js
 Step 79/114: Add smoke particle emitters
 Step 80/114: Add steam particle emitters
+Step 81/114: Add fire spark particle emitters
