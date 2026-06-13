@@ -61,3 +61,4 @@ Step 60/114: Render volcanic cones with craters
 Step 61/114: Add temperature and moisture attributes to tiles
 Step 62/114: Add cellular automata update tick loop
 Step 63/114: Implement plant growth tick timers on soil
+Step 64/114: Implement forest spread cellular physics
