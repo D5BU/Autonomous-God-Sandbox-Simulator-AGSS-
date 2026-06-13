@@ -91,3 +91,4 @@ Step 90/114: Connect lightning brush to strike and ignite trees
 Step 91/114: Integrate cloud layer simulation in renderer
 Step 92/114: Draw drifting cloud shadows on grid
 Step 93/114: Create AudioEngine class in src/audio.js
+Step 94/114: Initialize Web Audio API AudioContext safely
