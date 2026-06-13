@@ -89,3 +89,4 @@ Step 88/114: Connect sunshine brush to melt ice to water
 Step 89/114: Connect meteor brush to create craters and lava
 Step 90/114: Connect lightning brush to strike and ignite trees
 Step 91/114: Integrate cloud layer simulation in renderer
+Step 92/114: Draw drifting cloud shadows on grid
