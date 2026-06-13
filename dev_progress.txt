@@ -57,3 +57,4 @@ Step 56/114: Create shadow cast polygon builders for mountains
 Step 57/114: Add shadow casting for volcanoes
 Step 58/114: Render 3D pine tree triangles for forest tiles
 Step 59/114: Render snowcapped peaks on mountains
+Step 60/114: Render volcanic cones with craters
