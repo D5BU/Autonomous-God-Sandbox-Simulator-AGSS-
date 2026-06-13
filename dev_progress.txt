@@ -30,3 +30,4 @@ Step 29/114: Implement screen-to-grid coordinate transforms
 Step 30/114: Add mouse press listeners to canvas
 Step 31/114: Add mouse drag pan logic (right click drag)
 Step 32/114: Add mouse zoom logic (scroll wheel centered on mouse)
+Step 33/114: Add brush drawing mouse input listener
