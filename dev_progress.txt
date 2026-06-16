@@ -154,3 +154,4 @@ Step 159: Refine UI bindings: update tooltip display coordinates for tile 39
 Step 160: Calibrate raycaster: adjust intersection offset tolerance 40
 Step 161: Optimize WebGL rendering: fine-tune shadow bias on tile column 41
 Step 162: Adjust camera controller: calibrate rotation acceleration threshold 42
+Step 163: Refine weather engine: calibrate particle gravity scale 43
