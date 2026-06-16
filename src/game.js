@@ -1,4 +1,4 @@
-﻿import { World } from './world.js';
+import { World } from './world.js';
 import { Renderer } from './renderer.js';
 import { ParticleSystem } from './particles.js';
 import { AudioEngine } from './audio.js';
@@ -16,6 +16,7 @@ export class Game {
     // Interaction states
     this.isMouseDown = false;
     this.isPanning = false;
+    this.isRotating = false;
     this.lastMouseX = 0;
     this.lastMouseY = 0;
     this.mouseX = 0;
@@ -43,7 +44,7 @@ export class Game {
   initEvents() {
     window.addEventListener('resize', () => this.handleResize());
 
-    // Prevent context menu on canvas (we use right click to pan)
+    // Prevent context menu on canvas (we use right click to pan/rotate)
     this.canvas.addEventListener('contextmenu', (e) => e.preventDefault());
 
     // Mouse Listeners
@@ -54,8 +55,11 @@ export class Game {
       this.lastMouseX = e.clientX;
       this.lastMouseY = e.clientY;
 
-      // Panning triggers: middle mouse click (1) or right click (2)
-      if (e.button === 1 || e.button === 2) {
+      // Panning / Rotation triggers:
+      if (e.button === 1 || (e.button === 2 && e.shiftKey)) {
+        this.isRotating = true;
+        this.canvas.style.cursor = 'crosshair';
+      } else if (e.button === 2) {
         this.isPanning = true;
         this.canvas.style.cursor = 'grabbing';
       } else if (e.button === 0) {
@@ -79,12 +83,25 @@ export class Game {
       const hoverEvent = new CustomEvent('tile-hover', { detail: { tile } });
       window.dispatchEvent(hoverEvent);
 
+      const dx = e.clientX - this.lastMouseX;
+      const dy = e.clientY - this.lastMouseY;
+
       if (this.isPanning) {
-        // Drag pan viewport
-        const dx = e.clientX - this.lastMouseX;
-        const dy = e.clientY - this.lastMouseY;
-        this.renderer.panX += dx;
-        this.renderer.panY += dy;
+        // Drag pan camera target on the flat XZ ground
+        const scale = this.renderer.cameraDistance * 0.0012;
+        const fX = Math.sin(this.renderer.cameraTheta);
+        const fZ = Math.cos(this.renderer.cameraTheta);
+        const rX = -Math.cos(this.renderer.cameraTheta);
+        const rZ = Math.sin(this.renderer.cameraTheta);
+
+        this.renderer.cameraTarget.x -= (dx * rX + dy * fX) * scale;
+        this.renderer.cameraTarget.z -= (dx * rZ + dy * fZ) * scale;
+        this.renderer.updateCameraPosition();
+      } else if (this.isRotating) {
+        // Drag rotate (Yaw / Pitch)
+        this.renderer.cameraTheta -= dx * 0.007;
+        this.renderer.cameraPhi = Math.max(0.05, Math.min(Math.PI / 2 - 0.05, this.renderer.cameraPhi + dy * 0.007));
+        this.renderer.updateCameraPosition();
       } else if (this.isMouseDown && e.buttons === 1) {
         // Drag paint terrain
         this.paintAtMouse(e.clientX, e.clientY);
@@ -97,6 +114,7 @@ export class Game {
     window.addEventListener('mouseup', (e) => {
       this.isMouseDown = false;
       this.isPanning = false;
+      this.isRotating = false;
       this.canvas.style.cursor = 'default';
     });
 
@@ -104,21 +122,10 @@ export class Game {
     this.canvas.addEventListener('wheel', (e) => {
       e.preventDefault();
       
-      // Calculate mouse position relative to canvas center before zoom change
-      const rect = this.canvas.getBoundingClientRect();
-      const mx = e.clientX - rect.left - this.canvas.width / 2;
-      const my = e.clientY - rect.top - this.canvas.height / 2;
-
-      // Zoom factor calculation
-      const zoomFactor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
-      const oldZoom = this.renderer.zoom;
-      
-      this.renderer.zoom = Math.min(5.0, Math.max(0.3, this.renderer.zoom * zoomFactor));
-
-      // Zoom centering correction: adjust pan so the mouse stays in the same place
-      const actualZoomFactor = this.renderer.zoom / oldZoom;
-      this.renderer.panX = mx - (mx - this.renderer.panX) * actualZoomFactor;
-      this.renderer.panY = my - (my - this.renderer.panY) * actualZoomFactor;
+      // Zoom camera distance along its view vector
+      const delta = e.deltaY;
+      this.renderer.cameraDistance = Math.max(15, Math.min(200, this.renderer.cameraDistance + delta * 0.05));
+      this.renderer.updateCameraPosition();
     }, { passive: false });
   }
 
