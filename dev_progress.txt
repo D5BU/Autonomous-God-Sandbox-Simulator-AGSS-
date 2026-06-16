@@ -169,3 +169,4 @@ Step 174: Tweak day/night cycle: adjust sunset atmosphere tint gradient 54
 Step 175: Optimize instanced mesh: reduce overhead of color updates for tile 55
 Step 176: Refine 3D features: adjust snow-cap scale on mountain height 56
 Step 177: Tweak particle decay: adjust lifespan of volcanic smoke puff 57
+Step 178: Optimize water animation: calibrate wave frequency scaling 58
