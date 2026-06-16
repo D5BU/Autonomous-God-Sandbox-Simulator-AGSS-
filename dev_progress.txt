@@ -187,3 +187,4 @@ Step 192: Adjust camera controller: calibrate rotation acceleration threshold 72
 Step 193: Refine weather engine: calibrate particle gravity scale 73
 Step 194: Tweak day/night cycle: adjust sunset atmosphere tint gradient 74
 Step 195: Optimize instanced mesh: reduce overhead of color updates for tile 75
+Step 196: Refine 3D features: adjust snow-cap scale on mountain height 76
