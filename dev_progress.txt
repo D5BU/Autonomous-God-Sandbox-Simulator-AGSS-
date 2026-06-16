@@ -148,3 +148,4 @@ Step 153: Refine weather engine: calibrate particle gravity scale 33
 Step 154: Tweak day/night cycle: adjust sunset atmosphere tint gradient 34
 Step 155: Optimize instanced mesh: reduce overhead of color updates for tile 35
 Step 156: Refine 3D features: adjust snow-cap scale on mountain height 36
+Step 157: Tweak particle decay: adjust lifespan of volcanic smoke puff 37
