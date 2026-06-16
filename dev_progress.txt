@@ -132,3 +132,4 @@ Step 137: Tweak particle decay: adjust lifespan of volcanic smoke puff 17
 Step 138: Optimize water animation: calibrate wave frequency scaling 18
 Step 139: Refine UI bindings: update tooltip display coordinates for tile 19
 Step 140: Calibrate raycaster: adjust intersection offset tolerance 20
+Step 141: Optimize WebGL rendering: fine-tune shadow bias on tile column 21
