@@ -113,3 +113,4 @@ Step 112/114: Bind local storage save slot read/write
 Step 113/114: Bind map export/import and seed generation actions
 Step 114/114: Beta Release: Complete God Simulator engine with 3D height shadows, glowing night shader, audio synthesis, and cloud layers
 Step 121: Optimize WebGL rendering: fine-tune shadow bias on tile column 1
+Step 122: Adjust camera controller: calibrate rotation acceleration threshold 2
