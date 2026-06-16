@@ -115,3 +115,4 @@ Step 114/114: Beta Release: Complete God Simulator engine with 3D height shadows
 Step 121: Optimize WebGL rendering: fine-tune shadow bias on tile column 1
 Step 122: Adjust camera controller: calibrate rotation acceleration threshold 2
 Step 123: Refine weather engine: calibrate particle gravity scale 3
+Step 124: Tweak day/night cycle: adjust sunset atmosphere tint gradient 4
