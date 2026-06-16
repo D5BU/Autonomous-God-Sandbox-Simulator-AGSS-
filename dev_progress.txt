@@ -145,3 +145,4 @@ Step 150: Calibrate raycaster: adjust intersection offset tolerance 30
 Step 151: Optimize WebGL rendering: fine-tune shadow bias on tile column 31
 Step 152: Adjust camera controller: calibrate rotation acceleration threshold 32
 Step 153: Refine weather engine: calibrate particle gravity scale 33
+Step 154: Tweak day/night cycle: adjust sunset atmosphere tint gradient 34
