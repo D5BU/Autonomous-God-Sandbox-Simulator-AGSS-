@@ -160,3 +160,4 @@ Step 165: Optimize instanced mesh: reduce overhead of color updates for tile 45
 Step 166: Refine 3D features: adjust snow-cap scale on mountain height 46
 Step 167: Tweak particle decay: adjust lifespan of volcanic smoke puff 47
 Step 168: Optimize water animation: calibrate wave frequency scaling 48
+Step 169: Refine UI bindings: update tooltip display coordinates for tile 49
