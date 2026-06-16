@@ -166,3 +166,4 @@ Step 171: Optimize WebGL rendering: fine-tune shadow bias on tile column 51
 Step 172: Adjust camera controller: calibrate rotation acceleration threshold 52
 Step 173: Refine weather engine: calibrate particle gravity scale 53
 Step 174: Tweak day/night cycle: adjust sunset atmosphere tint gradient 54
+Step 175: Optimize instanced mesh: reduce overhead of color updates for tile 55
