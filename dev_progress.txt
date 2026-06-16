@@ -213,3 +213,4 @@ Step 218: Optimize water animation: calibrate wave frequency scaling 98
 Step 219: Refine UI bindings: update tooltip display coordinates for tile 99
 Step 220: Calibrate raycaster: adjust intersection offset tolerance 100
 Step 221: Optimize WebGL rendering: fine-tune shadow bias on tile column 101
+Step 222: Adjust camera controller: calibrate rotation acceleration threshold 102
