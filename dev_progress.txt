@@ -211,3 +211,4 @@ Step 216: Refine 3D features: adjust snow-cap scale on mountain height 96
 Step 217: Tweak particle decay: adjust lifespan of volcanic smoke puff 97
 Step 218: Optimize water animation: calibrate wave frequency scaling 98
 Step 219: Refine UI bindings: update tooltip display coordinates for tile 99
+Step 220: Calibrate raycaster: adjust intersection offset tolerance 100
